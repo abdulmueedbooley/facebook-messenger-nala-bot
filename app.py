@@ -8,13 +8,16 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+def log(msg):
+    print(str(msg))
+    sys.stdout.flush()
 
 @app.route('/', methods=['GET'])
 def verify():
     # when the endpoint is registered as a webhook, it must echo back
     # the 'hub.challenge' value it receives in the query arguments
     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
-        if not request.args.get("hub.verify_token") == os.environ["VERIFY_TOKEN"]:
+        if not request.args.get("hub.verify_token") == "nala_booley_2019":
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
 
@@ -38,18 +41,22 @@ def webhook():
 
                     sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
-                    message_text = messaging_event["message"]["text"]  # the message's text
+                    message_text = messaging_event["message"].get("text", "")  # the message's text
 
-                    send_message(sender_id, "roger that!")
+                    user_msg = message_text.lower().strip()
 
-                if messaging_event.get("delivery"):  # delivery confirmation
-                    pass
+                    if any(word in user_msg for word in ["hi", "hello", "hey"]):
+                        send_message(sender_id, "Meow-llo! My name is Nala Booley.")
 
-                if messaging_event.get("optin"):  # optin confirmation
-                    pass
+                    elif any(word in user_msg for word in ["food", "eat", "hungry", "pampers"]):
+                        send_message(sender_id, "Iam a fat cat and I LOVE FOOD. My favourite brand is PAMPERS seafood flavour!!!")
 
-                if messaging_event.get("postback"):  # user clicked/tapped "postback" button in earlier message
-                    pass
+                    elif any(word in user_msg for word in ["breed", "kind", "type"]):
+                        send_message(sender_id, "Iam a colourful ginger cat. A good representation would be a Calico cat.")
+
+                    else:
+                        #DEFAULT RESPONSE
+                        send_message(sender_id, f"Nala heard you say: '{message_text}'")
 
     return "ok", 200
 
@@ -59,7 +66,7 @@ def send_message(recipient_id, message_text):
     log("sending message to {recipient}: {text}".format(recipient=recipient_id, text=message_text))
 
     params = {
-        "access_token": os.environ["PAGE_ACCESS_TOKEN"]
+        "access_token": "EAAo3GbZBmHVMBSRTzTtKRQ5jluhyKDRQ83QpZAGjngXj7KwXO7UcHEtbWmwzsvOvBCrogezg18638s8PQiV0mP3PErAfs0rQJpOXB2uZARuf3BdfIvFDDq6Mg6LEYWSgWnbRWNcNIvquZCKOpLmvmfSAEYLX6phr3WLMJj1UGBx50GyGuxRIejcKO5rtFNZBUTT8ytQZDZD"
     }
     headers = {
         "Content-Type": "application/json"
@@ -83,10 +90,10 @@ def log(msg, *args, **kwargs):  # simple wrapper for logging to stdout on heroku
         if type(msg) is dict:
             msg = json.dumps(msg)
         else:
-            msg = unicode(msg).format(*args, **kwargs)
+            msg = str(msg).format(*args, **kwargs)
         print("{}: {}".format(datetime.now(), msg))
-    except UnicodeEncodeError:
-        pass  # squash logging errors in case of non-ascii text
+    except Exception:
+        pass
     sys.stdout.flush()
 
 

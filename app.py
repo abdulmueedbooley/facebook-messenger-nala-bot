@@ -17,7 +17,7 @@ def verify():
     # when the endpoint is registered as a webhook, it must echo back
     # the 'hub.challenge' value it receives in the query arguments
     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
-        if not request.args.get("hub.verify_token") == "nala_booley_2019":
+        if not request.args.get("hub.verify_token") == "nala_booley_2019": #tokon
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
 
@@ -37,15 +37,15 @@ def webhook():
         for entry in data["entry"]:
             for messaging_event in entry["messaging"]:
 
-                if messaging_event.get("message"):  # someone sent us a message
+                if messaging_event.get("message"):  # this means someone sent us a message
 
                     sender_id = messaging_event["sender"]["id"]        # the facebook ID of the person sending you the message
                     recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
                     message_text = messaging_event["message"].get("text", "")  # the message's text
 
-                    user_msg = message_text.lower().strip()
+                    user_msg = message_text.lower().strip() # made text lower case and removed any unneccessary spacing
 
-                    if any(word in user_msg for word in ["hi", "hello", "hey"]):
+                    if any(word in user_msg for word in ["hi", "hello", "hey"]): # any of these strings are found in the text body
                         send_message(sender_id, "Meow-llo! My name is Nala Booley.")
 
                     elif any(word in user_msg for word in ["food", "eat", "hungry", "pampers"]):

@@ -1,0 +1,428 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://abdulmueedbooley.github.io/facebook-messenger-nala-bot/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Abdul - Mu'eed Booley</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-make-a-basic-facebook-messenger-bot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Abdul - Mu&#39;eed Booley" class="md-header__button md-logo" aria-label="Abdul - Mu'eed Booley" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abdul - Mu'eed Booley
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to make a basic Facebook Messenger Bot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/abdulmueedbooley/facebook-messenger-nala-bot" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    abdulmueedbooley/facebook-messenger-nala-bot
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Abdul - Mu&#39;eed Booley" class="md-nav__button md-logo" aria-label="Abdul - Mu'eed Booley" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Abdul - Mu'eed Booley
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/abdulmueedbooley/facebook-messenger-nala-bot" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    abdulmueedbooley/facebook-messenger-nala-bot
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to make a basic Facebook Messenger Bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="how-to-make-a-basic-facebook-messenger-bot">How to make a basic Facebook Messenger Bot</h1>
+<h1 id="documented-step-by-step-process">Documented Step-By-Step process:</h1>
+<h6 id="author-of-original-source-code-hartley-brody">Author of original source code: Hartley Brody</h6>
+<h6 id="author-of-modified-source-code-abdul-mueed-booley">Author of modified source code: Abdul - Mu'eed booley</h6>
+<p><br></p>
+<h2 id="step-1-we-will-be-creating-a-webhook-endpoint">Step 1: We will be creating a Webhook endpoint</h2>
+<p>Before sending and receiving messages, we first need to have a working endpoint that returns a 
+200 RESPONSE CODE and sends back information in order to verify your bot with FaceBook.</p>
+<p><img alt="Git Clone Screenshot" src="images/git-clone.png" /></p>
+<p>If not, install git bash to git clone my repository onto your local machine:</p>
+<pre><code>git clone &lt;https://github.com/abdulmueedbooley/facebook-messenger-nala-bot.git&gt;
+</code></pre>
+<p>Then cd into the folder and install python dependencies:</p>
+<pre><code>pip install -r requirements
+</code></pre>
+<p>For testing purposes and avoiding adding credit card information i deployed my app to ngrok</p>
+<p>What i did to setup ngrok:</p>
+<p>1.) Account Creation: Go to ngrok and create a free account. <a href="https://ngrok.com/">https://ngrok.com/</a></p>
+<p>2.) Download: Download the ngrok.exe file for Windows from their portal.</p>
+<p><img alt="Ngrok Tokon Screenshot" src="images/ngrok-tokon.png" /></p>
+<p>NOTE: Copy your authtokon as the example above</p>
+<p>3.) Authentication: Connect your local terminal (Git bash) to your ngrok account by running your unique auth token</p>
+<ul>
+<li><code>FOLLOW THESE GIT BASH COMMANDS</code><pre><code>ngrok config add-authtoken &lt;YOUR_AUTHTOKEN&gt;
+ngrok http 5000
+</code></pre>
+</li>
+</ul>
+<p>In order to test if everything is working smoothly on 2 SEPERATE GIT BASH terminals enter the following commands:</p>
+<pre><code>    ngrok http 5000
+
+    python app.py
+</code></pre>
+<p>If you want to kill the local server press anywhere on both of your git bash terminals and enter Ctr + c.</p>
+<p>Once you have entered those commands, in your broswer enter localhost:5000
+If you see the text "Hello World" everything should be running smoothly</p>
+<p><img alt="Hello World Screenshot" src="Images/hello-world.png" /></p>
+<h2 id="step-2-create-a-facebook-page">Step 2: Create a FaceBook page</h2>
+<p>Create a FaceBook page if you dont have one. The page is the identity of your bot.
+The name or category of your bot doesnt really matter. I named my bot after my cat NALA :)</p>
+<p>NOTE: Meta is extremely strict with their login process so try to avoid opening multiple tabs in FaceBook, otherwise meta flags this as 
+one too many requests, assuming the account is being hacked. 
+I failed to sign into my main account a few times then it locked me out for 24 hours, so to combat that problem i just created 
+a second account under my cats name and logged in from there.</p>
+<h2 id="step-3-create-a-facebook-app">Step 3: Create a FaceBook app</h2>
+<p>Once you have finished creating your Facebook page create an app by following this link <a href="https://developers.facebook.com/apps/">https://developers.facebook.com/apps/</a></p>
+<h3 id="you-should-be-able-to-see-a-blue-button-called-create-app-click-that-and-fill-in-the-necessary-information"><code>You should be able to see a blue button called "Create app", click that and fill in the necessary information</code></h3>
+<p><img alt="Create App Screenshot" src="images/create-app.png" /></p>
+<p><br></p>
+<p><img alt="App Details Screenshot" src="images/app-details.png" /></p>
+<p><br></p>
+<h3 id="underneathe-use-cases-proceed-to-others-option-on-the-far-left-and-scroll-down-and-press-the-radiobutton-option-others"><code>Underneathe use cases proceed to "others" option on the far left and scroll down and press the radiobutton option "Others"</code></h3>
+<p><img alt="Use Cases Screenshot" src="images/use-cases.png" /></p>
+<p><br></p>
+<h3 id="check-the-business-option"><code>Check the "Business" option</code></h3>
+<p><img alt="Business Screenshot" src="images/business.png" /></p>
+<h3 id="finally-create-your-app"><code>Finally create your app</code></h3>
+<p><img alt="Final Screenshot" src="images/final.png" /></p>
+<h3 id="once-youve-landed-on-the-developers-page-press-add-product"><code>Once you've landed on the developers page press "Add Product".</code></h3>
+<h3 id="under-available-products-press-set-up-next-to-the-messenger-option"><code>Under "Available products" press "set up" next to the "Messenger" option</code></h3>
+<p><img alt="Dev Sceenshot" src="images/dev.png" /></p>
+<p><br></p>
+<p><img alt="Messenger Screenshot" src="images/messenger.png" /></p>
+<h2 id="step-4-setup">Step 4: Setup</h2>
+<p>1.) Configure Webhooks</p>
+<ul>
+<li>Call back url is your "forwarding" link in git bash</li>
+</ul>
+<p>2.) Verify Tokon</p>
+<ul>
+<li>
+<p>This is a special tokon, make it any way you like and save it for later.</p>
+</li>
+<li>
+<p>The tokon is important, because we need to add it to our source code </p>
+</li>
+</ul>
+<p>Proceed with the necessary steps that are requested. IF YOU WANT TO DEPLOY it to the public proceed with step 3
+"Complete App Review".</p>
+<h2 id="step-5-chat-with-your-bot">Step 5: Chat with your bot</h2>
+<p>Open up app.py, dive into the source code and a comment that says "Enter tokon here" 
+Enter your tokon that you created. </p>
+<p><img alt="Example Screenshot" src="images/example.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

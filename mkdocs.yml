@@ -1,4 +1,7 @@
 site_name: Abdul - Mu'eed Booley
+site_url: https://abdulmueedbooley.github.io/facebook-messenger-nala-bot/
+repo_url: https://github.com/abdulmueedbooley/facebook-messenger-nala-bot
+repo_name: abdulmueedbooley/facebook-messenger-nala-bot
 
 theme:
   name: material

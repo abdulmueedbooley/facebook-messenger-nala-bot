@@ -47,7 +47,7 @@ If you want to kill the local server press anywhere on both of your git bash ter
 Once you have entered those commands, in your broswer enter localhost:5000
 If you see the text "Hello World" everything should be running smoothly
 
-![Hello World Screenshot](Images/hello-world.png)
+![Hello World Screenshot](images/hello-world.png)
 
 ## Step 2: Create a FaceBook page
 Create a FaceBook page if you dont have one. The page is the identity of your bot.
